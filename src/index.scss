@@ -20,79 +20,74 @@ body {
   min-height: 100%;
 }
 
-h3 {
-  /* center the header */
-  text-align: center;
-
-  /* Use a sans serif font with a little spacing and color */
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: 0.4rem;
-  font-size: var(--header-font-size);
-  color: var(--header-text-color);
-
-  /* Remove margins and set a little padding */
-  margin: 0;
-  padding: var(--header-font-size);
-
-  /* Set a background color for the header */
-  background-color: var(--header-background);
-}
-
-ul,
-li {
-  /* Be gone margins! */
-  margin: 0;
-  padding: 0;
-
-  /* and list styles */
-  list-style: none;
-}
-
-ul {
-  /* Make the height of the list equal to the height of the page MINUS the height taken by the header */
-  height: calc(10vh - 1 * var(--header-font-size));
-
-  /* Display the list as a 3 column and three row grid */
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-
-  /* Add a little gap between to allow the background color through */
-  gap: 0.2rem;
-  height: 100%;
-  /* Set the background color that will show through the gap */
-  background-color: var(--square-text-color);
-}
-
-ul li {
-  /* Use a monospace font */
-  font-family: monospace;
-  font-size: var(--square-font-size);
-
-  /* Style the background color of the item */
-  background-color: var(--square-background-color);
-
-  /* Make the cursor a pointer by default */
-  cursor: pointer;
-
-  /* Center the text in the LI */
-  display: flex;
+.button {
   align-items: center;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, 'Helvetica Neue', Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
   justify-content: center;
-
-  /* Don't let the squares become too small */
-  max-width: 2rem;
-  min-height: 2rem;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
 }
 
-ul li.taken {
-  cursor: not-allowed;
+.button:hover,
+.button:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
 }
 
-ul li.small {
-  font-size: 2rem;
+.button:hover {
+  transform: translateY(-1px);
 }
 
-ul li.not-allowed-click {
-  background-color: red;
+.button:active {
+  background-color: #f0f0f1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+table {
+  // border-collapse: collapse;
+  border-spacing: 0;
+  width: 50%;
+  position: relative;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: var(--square-text-color);
+}
+td {
+  border: 2px solid var(--square-text-color);
+  padding: 0.5rem;
+  width: 50%;
+  height: 50%;
+  font-size: var(--square-font-size);
+  color: var(--square-text-color);
+  background-color: var(--square-background-color);
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
 }
