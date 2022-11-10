@@ -13,6 +13,11 @@ export function App() {
     ['null', 'null', 'null', 'null', 'null', 'null', 'null', 'null'],
   ]
 
+  function handleClickCell(event: React.MouseEvent) {
+    event.preventDefault()
+    console.log('clicked cell')
+  }
+
   return (
     <div>
       <header>
@@ -22,10 +27,10 @@ export function App() {
       <p>
         <table>
           <tbody>
-            {board.map((row) => (
+            {board.map((row, y) => (
               <tr>
-                {row.map((col) => (
-                  <td>{'1'}</td>
+                {row.map((col, x) => (
+                  <td onClick={handleClickCell}></td>
                 ))}
               </tr>
             ))}

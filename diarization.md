@@ -26,6 +26,8 @@ create a handleClickCell (ultimately to activate a cell to reveal a "square")
 hook up button to create a new game - added API
 
 P:roblem
+creating multiple states for the board
+create a state for new game
 
 - create a game board
 - supply a button to create a new game

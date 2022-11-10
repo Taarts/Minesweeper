@@ -70,12 +70,14 @@ body {
 
 table {
   // border-collapse: collapse;
-  border-spacing: 0;
+  border-spacing: 0.1;
   width: 50%;
   position: relative;
 }
 tbody {
-  display: table-row-group;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
   vertical-align: middle;
   border-color: var(--square-text-color);
 }
@@ -90,4 +92,9 @@ td {
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
+}
+p {
+  margin: 1rem;
+  margin-inline: auto;
+  padding: 0 5rem;
 }
