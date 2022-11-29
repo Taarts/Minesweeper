@@ -65,3 +65,11 @@ Problem: The player's first click might reveal a non-zero number, and they will 
 subtract the number that is written in the square (the true number of mines that are around it). That is the number of unrevealed mines left around this square. Divide that by the number of unrevealed squares around the current square. That is the probability of each of the adjacent square containing a mine. If the probability is 1, then flag the square. If the probability is 0, then reveal the square.
 
 C:ode
+
+created a onClick function to handle player interaction with the board
+
+<!-- From React useEffect Lecture -->
+
+Using localstorage
+
+- always site specific

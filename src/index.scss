@@ -1,11 +1,12 @@
 :root {
   /* CSS Variables for all the font colors and sizes. Try changing these! */
-  --header-background: #5661b3;
-  --header-text-color: #fff9c2;
+  --header-background: #006d77;
+  --header-text-color: #ffddd2;
   --header-font-size: 1rem;
-  --square-font-size: calc(2 * var(--header-font-size));
-  --square-text-color: #5661b3;
-  --square-background-color: #e6e8ff;
+  --square-font-size: calc(1 * var(--header-font-size));
+  --square-text-color: #b4c5d9;
+  --square-background-color: #23415c;
+  --background-color: #151c30;
   --square-border: 3px solid var(--square-text-color);
 
   font: 16px / 1 sans-serif;
@@ -15,9 +16,31 @@ html {
   height: 100%;
 }
 
+header {
+  background: var(--header-background);
+  color: var(--header-text-color);
+  font-size: var(--header-font-size);
+  padding: 1rem;
+  text-align: center;
+}
 body {
-  margin: 0;
   min-height: 100%;
+  background-color: var(--background-color);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+  margin-inline: 15rem;
+  // border: 5px solid red;
+}
+.centered {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin-inline: 5rem;
+  // border: 5px solid red;
 }
 
 .button {
@@ -67,11 +90,10 @@ body {
   color: rgba(0, 0, 0, 0.65);
   transform: translateY(0);
 }
-
 table {
   // border-collapse: collapse;
-  border-spacing: 0.1;
-  width: 50%;
+  border-spacing: 0;
+  width: 10%;
   position: relative;
 }
 tbody {
@@ -83,9 +105,9 @@ tbody {
 }
 td {
   border: 2px solid var(--square-text-color);
-  padding: 0.5rem;
-  width: 50%;
-  height: 50%;
+  // padding: 1.4rem;
+  width: 32px;
+  height: 32px;
   font-size: var(--square-font-size);
   color: var(--square-text-color);
   background-color: var(--square-background-color);
@@ -97,4 +119,20 @@ p {
   margin: 1rem;
   margin-inline: auto;
   padding: 0 5rem;
+}
+.diffButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-inline: auto;
+  padding: 0 5rem;
+}
+.diffButton button {
+  font: bold 1rem sans-serif;
+  background-color: var(--square-background-color);
+  color: var(--header-text-color);
+  margin: 0.5rem;
+  padding: 0.5rem 0.5rem;
+  border-radius: 10px;
+  border-style: none;
 }
